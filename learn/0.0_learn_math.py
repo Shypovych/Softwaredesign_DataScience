@@ -29,6 +29,7 @@ else:
     x = x / 2
     print(f"x = {x}")
 
+
 if x < 45:
     x = x * 2
 elif x < 90:
@@ -36,4 +37,3 @@ elif x < 90:
 else:
     x = x ** 2
     print(f"x = {x}") 
-    
