@@ -1,3 +1,4 @@
+# Exercise 8.1
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -25,7 +26,7 @@ scalarproduct = lambda f, g, dt: dt * np.vecdot(f, g)  # scalar product (inner p
 a_coeff = lambda n, f: 2 / L * scalarproduct(f, np.cos(w * n * t), dt)  # cosine term
 b_coeff = lambda n, f: 2 / L * scalarproduct(f, np.sin(w * n * t), dt)  # sine term
 
-# f_hat_0 (initial Fourier component)
+# f_hat_0 
 f_hat = np.zeros((M + 1, N))
 f_hat[0, :] = 1 / 2 * a_coeff(0, f)  # a_0 / 2 for f
 f2_hat = np.zeros((M2 + 1, N))
