@@ -1,6 +1,6 @@
 # =============================================================
 #   ATTRIBUTE DEFINITION
-# ===============================================?=============
+# =============================================================
 # This script demonstrates how to define a simple class.
 # Core idea: encapsulation — store data inside objects using attributes.
 
