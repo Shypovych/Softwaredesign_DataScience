@@ -22,10 +22,3 @@ def get_accuracy(N: int) -> tuple[float, float]:
 for N in [100, 1000, 10000, 100000]:
     pi_est, error = get_accuracy(N)
     print(f"N = {N:6d} | π ≈ {pi_est:.6f} | error = {error:.6f}")
-
-# Type hints вказують, що параметр N має бути типу int.
-# Щоб підкреслити, що N завжди додатне, можна:
-#   - додати коментар: N: int  # must be positive
-#   - або перевірку: if N <= 0: raise ValueError("N must be positive")
-# Python не примушує дотримуватися типів під час виконання —
-# підказки використовуються лише інструментами перевірки типів (наприклад, mypy або VS Code).

@@ -16,7 +16,7 @@ def estimate_pi(N):
     M = in_unit_circle(N)
     return 4 * M / N
 
-# Function that measures accuracy of the estimation
+# Function that measures accuracy of estimation
 def get_accuracy(N):
     estimated = estimate_pi(N)
     difference = abs(math.pi - estimated)
@@ -26,8 +26,3 @@ def get_accuracy(N):
 for N in [100, 1000, 10000, 100000]:
     pi_est, error = get_accuracy(N)
     print(f"N = {N:6d} | π ≈ {pi_est:.6f} | error = {error:.6f}")
-
-# Алгоритм генерує N випадкових точок у межах квадрата [0,1]×[0,1]
-# Підраховується кількість точок M, що потрапляють усередину чверті кола (x² + y² ≤ 1)
-# За формулою π ≈ 4 * M / N отримуємо наближення π
-# Чим більше точок N, тим точніше оцінка значення π
