@@ -3,6 +3,8 @@ import random
 import math
 
 def in_unit_circle(N: int) -> int:     # N must be integer, returns integer
+    if N <= 0:                         # check that N is positive
+        raise ValueError("N must be a positive integer")
     count = 0
     for _ in range(N):
         x, y = random.random(), random.random()
@@ -11,6 +13,8 @@ def in_unit_circle(N: int) -> int:     # N must be integer, returns integer
     return count
 
 def estimate_pi(N: int) -> float:      # N must be integer, returns float
+    if N <= 0:                         # check that N is positive
+        raise ValueError("N must be a positive integer")
     M = in_unit_circle(N)
     return 4 * M / N
 
@@ -22,3 +26,6 @@ def get_accuracy(N: int) -> tuple[float, float]:
 for N in [100, 1000, 10000, 100000]:
     pi_est, error = get_accuracy(N)
     print(f"N = {N:6d} | π ≈ {pi_est:.6f} | error = {error:.6f}")
+
+# Is the type enforced during runtime?
+# No, Python does not enforce type hints at runtime.
