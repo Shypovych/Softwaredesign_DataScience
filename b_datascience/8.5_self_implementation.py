@@ -11,6 +11,7 @@ x = np.linspace(a, b, N, endpoint=False)
 dx = x[1] - x[0]
 
 # Define discrete wave numbers
+# kappa = np.fft.fftfreq(N, (b - a) / (N * 2 * np.pi)) # original
 kappa = 2 * np.pi * np.fft.fftfreq(N, d=dx)   # added missing Fourier wavenumbers
 
 # Initial condition
